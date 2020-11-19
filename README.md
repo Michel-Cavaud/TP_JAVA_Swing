@@ -23,6 +23,7 @@ Un clic sur une bière permet d'avoir les informations dans la saisie pour pourv
 ![Tableau avec plusieurs bières et une en modification](https://github.com/Michel-Cavaud/TP_JAVA_Swing/blob/master/Dossier_de_conception/Bi%C3%A8re2.png) 
 ![Tableau avec une bière en cours de suppression](https://github.com/Michel-Cavaud/TP_JAVA_Swing/blob/master/Dossier_de_conception/Bi%C3%A8re3.png)
 
-Le diagramme des class utilisées :![Diagramme des class Bières](https://github.com/Michel-Cavaud/TP_JAVA_Swing/blob/master/src/bieres/Diagramme_Class_Bi%C3%A8res.png)
+Le diagramme des class utilisées :
+- ![Diagramme des class Bières](https://github.com/Michel-Cavaud/TP_JAVA_Swing/blob/master/src/bieres/Diagramme_Class_Bi%C3%A8res.png)
 
 
