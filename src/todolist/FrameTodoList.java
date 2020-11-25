@@ -24,10 +24,10 @@ public class FrameTodoList implements MouseListener{
 	private JTextField textNouveau;
 	private JButton btnPlus;
 
-	JList<String> jListTask;
-	DefaultListModel<String> model;
+	JList<Todo> jListTask;
+	DefaultListModel<Todo> model;
 	
-	String valList;
+	Todo valList;
 	int index;
 
 	/**
@@ -79,8 +79,8 @@ public class FrameTodoList implements MouseListener{
 		frame.getContentPane().add(textNouveau);
 		textNouveau.setColumns(10);
 
-		jListTask = new JList<String>();
-		model = new DefaultListModel<String>();
+		jListTask = new JList<Todo>();
+		model = new DefaultListModel<Todo>();
 		jListTask.setModel(model);
 		jListTask.setFont(new Font("Arial", Font.PLAIN, 20));
 		jListTask.setBackground(Color.WHITE);
@@ -93,7 +93,8 @@ public class FrameTodoList implements MouseListener{
 		btnPlus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if (textNouveau.getText() != "") {
-					model.addElement(textNouveau.getText());
+					Todo tache = new Todo(textNouveau.getText());
+					model.addElement(tache);
 					textNouveau.setText("");
 				}
 			}
@@ -126,12 +127,10 @@ public class FrameTodoList implements MouseListener{
 	public void mouseClicked(MouseEvent e) {
 		 if (e.getClickCount() == 2) {
         	if(jListTask.getSelectedValue() != null) {
-        		if(jListTask.getSelectedValue().indexOf(" - Fini") == -1) {
-        		
-        			model.setElementAt(jListTask.getSelectedValue() + " - Fini", jListTask.getSelectedIndex());
-        		}else {
-        			model.setElementAt(jListTask.getSelectedValue().replace(" - Fini", ""), jListTask.getSelectedIndex());
-        		}	
+        		Todo tache = model.get(jListTask.getSelectedIndex());
+        		tache.toggleFaite();
+        		model.set(jListTask.getSelectedIndex(), tache);
+     
         	}
          }
 	}
