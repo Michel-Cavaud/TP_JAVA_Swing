@@ -71,7 +71,7 @@ public class FrameBieres implements MouseListener {
 		};
 		model = new DefaultTableModel(0, 0);
 
-		String[] columnNames = new String[] { "Nom", "Variété", "Degré" };
+		String[] columnNames = new String[] { "Nom", "VariÃ©tÃ©", "DegrÃ©" };
 		model.setColumnIdentifiers(columnNames);
 		jTableBeer.addMouseListener(this);
 		jTableBeer.setModel(model);
@@ -120,11 +120,11 @@ public class FrameBieres implements MouseListener {
 		degre.setBounds(81, 173, 139, 26);
 		degre.setColumns(10);
 
-		btnCreer = new JButton("Créer");
+		btnCreer = new JButton("CrÃ©er");
 		btnCreer.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
 		btnCreer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (btnCreer.getText().equals("Créer") & !nom.getText().equals("") & !variete.getText().equals("")
+				if (btnCreer.getText().equals("CrÃ©er") & !nom.getText().equals("") & !variete.getText().equals("")
 						& !degre.getText().equals("") & isNumeric(degre.getText())) {
 					setBeer(new Beer(nom.getText(), variete.getText(), Float.parseFloat(degre.getText())));
 					row = getBeer().toRow();
@@ -144,7 +144,7 @@ public class FrameBieres implements MouseListener {
 					nom.setText("");
 					variete.setText("");
 					degre.setText("");
-					btnCreer.setText("Créer");
+					btnCreer.setText("CrÃ©er");
 				}
 			}
 		});
@@ -168,16 +168,16 @@ public class FrameBieres implements MouseListener {
 	public void mouseClicked(MouseEvent e) {
 		sel = jTableBeer.getSelectedRow();
 		if (e.getClickCount() == 2) {
-			int retour = JOptionPane.showConfirmDialog(frame, "Voulez-vous supprimer cette bière ?", 
-				     "Supprimer une bière", JOptionPane.WARNING_MESSAGE);
+			int retour = JOptionPane.showConfirmDialog(frame, "Voulez-vous supprimer cette biÃ©re ?", 
+				     "Supprimer une biÃ©re", JOptionPane.WARNING_MESSAGE);
 			if(retour == 0) {
 				model.removeRow(sel);
-				btnCreer.setText("Créer");
+				btnCreer.setText("CrÃ©er");
 				nom.setText("");
 				variete.setText("");
 				degre.setText("");
 			}else {
-				btnCreer.setText("Créer");
+				btnCreer.setText("CrÃ©er");
 				nom.setText("");
 				variete.setText("");
 				degre.setText("");
