@@ -7,12 +7,16 @@ Greta Montpellier.
 ## 1er TP une TodoList
 Le bouton + permet d'ajouter une ToDo à la liste. Une ToDo sélectionnée peut être supprimée. Un double clic sur une ToDo permet de la valider fini ou l'inverse. Et les ToDo peuvent être changées de place avec la souris ("drag and drop").
 
-|![ToDoList vide](https://github.com/Michel-Cavaud/TP_JAVA_Swing/blob/master/Dossier_de_conception/todolist.png)| ![ToDoList avec liste](https://github.com/Michel-Cavaud/TP_JAVA_Swing/blob/master/Dossier_de_conception/todolist2png.png)|
+<p align="center">
+  <img src="https://github.com/Michel-Cavaud/TP_JAVA_Swing/blob/master/Dossier_de_conception/todolist.png?raw=true" alt="ToDoList vide"/>
+  <img src="https://github.com/Michel-Cavaud/TP_JAVA_Swing/blob/master/Dossier_de_conception/todolist2png.png?raw=true" alt="ToDoList avec liste"/>
+</p>
 
 Le diagramme de la class utilisé :
-
- - ![Diagramme class
-   TOdOList](https://github.com/Michel-Cavaud/TP_JAVA_Swing/blob/master/src/todolist/Diagramme_Class_ToDoList.png)
+   <p align="center">
+  <img src="https://github.com/Michel-Cavaud/TP_JAVA_Swing/blob/master/src/todolist/Diagramme_Class_ToDoList.png?raw=true" alt="Diagramme class
+   TOdOList"/>
+</p>
 
 ## 2ème TP une collection d'objets : des bières.
 
